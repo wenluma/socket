@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "GLSocketManager.h"
+#import <SkaCmBase.pb.h>
 
 @interface ViewController ()
 
@@ -17,6 +19,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [[GLSocketManager shared] startConnect];
+//    [[GLSocketManager shared] socketWriteString:@"hello" tag:1];
+    
+    for (int i=0; i<10; i++) {
+        LinkServerMessage *message = [[[[[LinkServerMessage builder]
+                                         setUserId:@"1234567890ytrewqrw"]
+                                        setProductType:ProductTypePtEightDotOne]
+                                       setLinkType:LinkTypeLtcHeartbeat] build];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {

@@ -14,6 +14,9 @@
 		8E6DD4ED1B3961D000ECBF6F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E6DD4EC1B3961D000ECBF6F /* Images.xcassets */; };
 		8E6DD4F01B3961D000ECBF6F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6DD4EE1B3961D000ECBF6F /* LaunchScreen.xib */; };
 		8E6DD4FC1B3961D000ECBF6F /* GCDAsynSocketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6DD4FB1B3961D000ECBF6F /* GCDAsynSocketTests.m */; };
+		8E6DD5071B3961FD00ECBF6F /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6DD5061B3961FD00ECBF6F /* GCDAsyncSocket.m */; };
+		8E6DD50B1B3964F500ECBF6F /* GLSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6DD50A1B3964F500ECBF6F /* GLSocketManager.m */; };
+		8E7D8F6A1B4690D300695799 /* libprotobuf-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E7D8F671B4690CB00695799 /* libprotobuf-ios.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +26,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 8E6DD4DB1B3961D000ECBF6F;
 			remoteInfo = GCDAsynSocket;
+		};
+		8E7D8F661B4690CB00695799 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E7D8F611B4690CA00695799 /* protobuf-ios.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D7BA74EE15E220F6001835BB;
+			remoteInfo = "protobuf-ios";
+		};
+		8E7D8F681B4690CB00695799 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E7D8F611B4690CA00695799 /* protobuf-ios.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D7BA74FE15E220F7001835BB;
+			remoteInfo = "protobuf-iosTests";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -40,6 +57,12 @@
 		8E6DD4F51B3961D000ECBF6F /* GCDAsynSocketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GCDAsynSocketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E6DD4FA1B3961D000ECBF6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E6DD4FB1B3961D000ECBF6F /* GCDAsynSocketTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDAsynSocketTests.m; sourceTree = "<group>"; };
+		8E6DD5051B3961FD00ECBF6F /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		8E6DD5061B3961FD00ECBF6F /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		8E6DD5091B3964F500ECBF6F /* GLSocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLSocketManager.h; sourceTree = "<group>"; };
+		8E6DD50A1B3964F500ECBF6F /* GLSocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLSocketManager.m; sourceTree = "<group>"; };
+		8E7D8F401B467E6900695799 /* GCDAsynSocket.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDAsynSocket.pch; sourceTree = "<group>"; };
+		8E7D8F611B4690CA00695799 /* protobuf-ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "protobuf-ios.xcodeproj"; path = "../../../Downloads/protobuf-ios-master/runtime/protobuf-ios/protobuf-ios.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E7D8F6A1B4690D300695799 /* libprotobuf-ios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,11 +105,14 @@
 		8E6DD4DE1B3961D000ECBF6F /* GCDAsynSocket */ = {
 			isa = PBXGroup;
 			children = (
+				8E7D8F611B4690CA00695799 /* protobuf-ios.xcodeproj */,
+				8E6DD5081B39620300ECBF6F /* GCDAsyn */,
 				8E6DD4E31B3961D000ECBF6F /* AppDelegate.h */,
 				8E6DD4E41B3961D000ECBF6F /* AppDelegate.m */,
 				8E6DD4E61B3961D000ECBF6F /* ViewController.h */,
 				8E6DD4E71B3961D000ECBF6F /* ViewController.m */,
 				8E6DD4E91B3961D000ECBF6F /* Main.storyboard */,
+				8E7D8F401B467E6900695799 /* GCDAsynSocket.pch */,
 				8E6DD4EC1B3961D000ECBF6F /* Images.xcassets */,
 				8E6DD4EE1B3961D000ECBF6F /* LaunchScreen.xib */,
 				8E6DD4DF1B3961D000ECBF6F /* Supporting Files */,
@@ -117,6 +144,26 @@
 				8E6DD4FA1B3961D000ECBF6F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8E6DD5081B39620300ECBF6F /* GCDAsyn */ = {
+			isa = PBXGroup;
+			children = (
+				8E6DD5051B3961FD00ECBF6F /* GCDAsyncSocket.h */,
+				8E6DD5061B3961FD00ECBF6F /* GCDAsyncSocket.m */,
+				8E6DD5091B3964F500ECBF6F /* GLSocketManager.h */,
+				8E6DD50A1B3964F500ECBF6F /* GLSocketManager.m */,
+			);
+			name = GCDAsyn;
+			sourceTree = "<group>";
+		};
+		8E7D8F621B4690CA00695799 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E7D8F671B4690CB00695799 /* libprotobuf-ios.a */,
+				8E7D8F691B4690CB00695799 /* protobuf-iosTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +233,12 @@
 			mainGroup = 8E6DD4D31B3961D000ECBF6F;
 			productRefGroup = 8E6DD4DD1B3961D000ECBF6F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8E7D8F621B4690CA00695799 /* Products */;
+					ProjectRef = 8E7D8F611B4690CA00695799 /* protobuf-ios.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8E6DD4DB1B3961D000ECBF6F /* GCDAsynSocket */,
@@ -193,6 +246,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8E7D8F671B4690CB00695799 /* libprotobuf-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libprotobuf-ios.a";
+			remoteRef = 8E7D8F661B4690CB00695799 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8E7D8F691B4690CB00695799 /* protobuf-iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "protobuf-iosTests.xctest";
+			remoteRef = 8E7D8F681B4690CB00695799 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8E6DD4DA1B3961D000ECBF6F /* Resources */ = {
@@ -219,9 +289,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6DD5071B3961FD00ECBF6F /* GCDAsyncSocket.m in Sources */,
 				8E6DD4E81B3961D000ECBF6F /* ViewController.m in Sources */,
 				8E6DD4E51B3961D000ECBF6F /* AppDelegate.m in Sources */,
 				8E6DD4E21B3961D000ECBF6F /* main.m in Sources */,
+				8E6DD50B1B3964F500ECBF6F /* GLSocketManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +419,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PREFIX_HEADER = /Users/miaogaoliang/MGLStudy/GCDAsynSocket/GCDAsynSocket/GCDAsynSocket.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/Users/miaogaoliang/Downloads/protobuf-ios-master/runtime/protobuf-ios/Classes/**",
+					"/Users/miaogaoliang/Downloads/protobuf-ios-master/runtime/protobuf-ios/protobuf-ios.xcodeproj/**",
+					"/Users/miaogaoliang/Downloads/protobuf-ios-master/runtime/protobuf-ios/Source",
+				);
 				INFOPLIST_FILE = GCDAsynSocket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,6 +438,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PREFIX_HEADER = /Users/miaogaoliang/MGLStudy/GCDAsynSocket/GCDAsynSocket/GCDAsynSocket.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/Users/miaogaoliang/Downloads/protobuf-ios-master/runtime/protobuf-ios/Classes/**",
+					"/Users/miaogaoliang/Downloads/protobuf-ios-master/runtime/protobuf-ios/protobuf-ios.xcodeproj/**",
+					"/Users/miaogaoliang/Downloads/protobuf-ios-master/runtime/protobuf-ios/Source",
+				);
 				INFOPLIST_FILE = GCDAsynSocket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,6 +506,7 @@
 				8E6DD5011B3961D000ECBF6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E6DD5021B3961D000ECBF6F /* Build configuration list for PBXNativeTarget "GCDAsynSocketTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +515,7 @@
 				8E6DD5041B3961D000ECBF6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

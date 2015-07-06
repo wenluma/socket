@@ -1,0 +1,14 @@
+//
+//  GCDAsynSocket.pch
+//  GCDAsynSocket
+//
+//  Created by kaxiaoer on 15/7/3.
+//  Copyright (c) 2015年 miaogaoliang. All rights reserved.
+//
+
+#ifndef GCDAsynSocket_GCDAsynSocket_pch
+#define GCDAsynSocket_GCDAsynSocket_pch
+
+#import <Foundation/Foundation.h>
+
+#endif
