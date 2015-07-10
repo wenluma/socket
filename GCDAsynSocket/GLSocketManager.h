@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 typedef NS_ENUM(NSUInteger, GLDataMessageType) {
     GLDataMessageTypeString = 1,
     GLDataMessageTypeProtobuf,
@@ -20,8 +19,13 @@ typedef NS_ENUM(NSUInteger, GLRequestType) {
     GLRequestTypeHeartBeat,
 };
 
-
 @class GCDAsyncSocket;
+@class LinkServerMessage;
+@class NoticeClientMessage;
+
+@protocol PBCallBackDelegate <NSObject>
+- (void)handleCallbackDataSource:(NoticeClientMessage *)msg;
+@end
 
 @interface GLSocketManager : NSObject
 
@@ -31,6 +35,8 @@ typedef NS_ENUM(NSUInteger, GLRequestType) {
 @property (copy, nonatomic) NSString *host;
 @property (copy, nonatomic) NSString *address;
 @property (assign) uint16_t port;
+@property (copy, nonatomic) NSString *userid;
+@property (weak, nonatomic) id<PBCallBackDelegate> delegate;
 
 //建立连接
 - (void)startConnect;
